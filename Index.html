@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<title>love</title>
+
+<style>
+  body {
+    background: pink;
+    text-align: center;
+    margin-top: 100px;
+    font-family: Arial;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  button {
+    padding: 12px 25px;
+    font-size: 18px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  #yesBtn {
+    background: green;
+    color: white;
+  }
+
+  #noBtn {
+    background: red;
+    color: white;
+    position: relative;
+  }
+
+  #result {
+    margin-top: 30px;
+    font-size: 28px;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>Айым кешірші </h1>
+<p>Кешіресің ба?</p>
+
+<button id="yesBtn" onclick="yesClick()">Иә</button>
+<button id="noBtn">Жоқ</button>
+
+<p id="result"></p>
+
+<script>
+const noBtn = document.getElementById("noBtn");
+
+// "Жоқ" қашады
+noBtn.addEventListener("mouseover", () => {
+  const x = Math.random() * (window.innerWidth - 100);
+  const y = Math.random() * (window.innerHeight - 50);
+
+  noBtn.style.position = "absolute";
+  noBtn.style.left = x + "px";
+  noBtn.style.top = y + "px";
+});
+
+// "Иә" басқанда жүректер шығады
+function yesClick() {
+  document.getElementById("result").innerHTML =
+    "❤️❤️❤️ Кешіргеніңе рахмет ❤️❤️❤️";
+}
+</script>
+
+</body>
+</html>
